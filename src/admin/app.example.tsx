@@ -34,4 +34,6 @@ export default {
   bootstrap(app: StrapiApp) {
     console.log(app);
   },
+
+  
 };

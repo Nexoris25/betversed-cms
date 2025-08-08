@@ -851,10 +851,12 @@ export interface SiteReviewSummaryBox extends Struct.ComponentSchema {
     displayName: 'summaryBox';
   };
   attributes: {
+    bestFor: Schema.Attribute.Component<'shared.key-point', true>;
     callToAction: Schema.Attribute.Component<'shared.button-link', true>;
     headline: Schema.Attribute.String;
     isVerified: Schema.Attribute.Boolean;
-    summaryPoints: Schema.Attribute.Component<'shared.key-point', true>;
+    promoCode: Schema.Attribute.Component<'shared.promo-code', false>;
+    ProsConsList: Schema.Attribute.Component<'shared.pros-cons', false>;
     summaryScore: Schema.Attribute.Decimal;
     summaryText: Schema.Attribute.RichText &
       Schema.Attribute.CustomField<
@@ -863,6 +865,7 @@ export interface SiteReviewSummaryBox extends Struct.ComponentSchema {
           preset: 'defaultHtml';
         }
       >;
+    testedBy: Schema.Attribute.Component<'shared.key-point', false>;
     verificationIcon: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;

@@ -611,101 +611,39 @@ export interface ApiBookmakerBookmaker extends Struct.CollectionTypeSchema {
   options: {
     draftAndPublish: true;
   };
-  pluginOptions: {
-    i18n: {
-      localized: true;
-    };
-  };
   attributes: {
     accountRegistration: Schema.Attribute.Component<
       'site-review.registration-steps',
       false
-    > &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
+    >;
     bookieFeatures: Schema.Attribute.Component<
       'site-review.top-features',
       false
-    > &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
+    >;
     bookmakerLicense: Schema.Attribute.Component<
       'site-review.bookie-license',
       false
-    > &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
+    >;
     compareBookies: Schema.Attribute.Component<
       'site-review.compare-bookies',
       false
-    > &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    countryCode: Schema.Attribute.Enumeration<['ng', 'gh', 'ke', 'za']> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
+    >;
+    countryCode: Schema.Attribute.Enumeration<['ng', 'gh', 'ke', 'za']>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    faqsSection: Schema.Attribute.Component<'shared.faqs-content', false> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    finalVerdict: Schema.Attribute.Component<'shared.verdict-block', false> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    heroSection: Schema.Attribute.Component<'site-review.hero-block', false> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    infoSources: Schema.Attribute.Component<
-      'shared.source-attribution',
-      false
-    > &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    isFeatured: Schema.Attribute.Boolean &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    lastUpdated: Schema.Attribute.Date &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    locale: Schema.Attribute.String;
+    faqsSection: Schema.Attribute.Component<'shared.faqs-content', false>;
+    finalVerdict: Schema.Attribute.Component<'shared.verdict-block', false>;
+    heroSection: Schema.Attribute.Component<'site-review.hero-block', false>;
+    infoSources: Schema.Attribute.Component<'shared.source-attribution', false>;
+    isFeatured: Schema.Attribute.Boolean;
+    lastUpdated: Schema.Attribute.Date;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::bookmaker.bookmaker'
-    >;
+    > &
+      Schema.Attribute.Private;
     moreSections: Schema.Attribute.DynamicZone<
       [
         'shared.heading',
@@ -713,69 +651,22 @@ export interface ApiBookmakerBookmaker extends Struct.CollectionTypeSchema {
         'shared.button-link',
         'shared.callout-box',
       ]
-    > &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
+    >;
     paymentMethods: Schema.Attribute.Component<
       'site-review.payment-methods',
       false
-    > &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    prosConsList: Schema.Attribute.Component<'shared.pros-cons', false> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
+    >;
+    prosConsList: Schema.Attribute.Component<'shared.pros-cons', false>;
     publishedAt: Schema.Attribute.DateTime;
-    publisherInfo: Schema.Attribute.Component<'shared.publisher-info', false> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    seoMeta: Schema.Attribute.Component<'shared.seo', false> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    slug: Schema.Attribute.UID<'title'> &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    summaryBox: Schema.Attribute.Component<'site-review.summary-box', false> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: false;
-        };
-      }>;
+    seoMeta: Schema.Attribute.Component<'shared.seo', false>;
+    slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
+    summaryBox: Schema.Attribute.Component<'site-review.summary-box', false>;
     testingDetails: Schema.Attribute.Component<
       'site-review.testing-snapshot',
       false
-    > &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
+    >;
     title: Schema.Attribute.String &
       Schema.Attribute.Required &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }> &
       Schema.Attribute.SetMinMaxLength<{
         maxLength: 80;
       }>;

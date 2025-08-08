@@ -11,7 +11,7 @@
     "summaryScore": {
       "type": "decimal"
     },
-    "summaryPoints": {
+    "bestFor": {
       "type": "component",
       "component": "shared.key-point",
       "repeatable": true
@@ -43,6 +43,21 @@
         "videos",
         "audios"
       ]
+    },
+    "ProsConsList": {
+      "type": "component",
+      "component": "shared.pros-cons",
+      "repeatable": false
+    },
+    "testedBy": {
+      "type": "component",
+      "component": "shared.key-point",
+      "repeatable": false
+    },
+    "promoCode": {
+      "type": "component",
+      "component": "shared.promo-code",
+      "repeatable": false
     }
   },
   "config": {}
