@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_shared_headings",
+  "info": {
+    "displayName": "heading"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "required": true
+    },
+    "headingLevel": {
+      "type": "enumeration",
+      "required": false,
+      "default": "h2",
+      "enum": [
+        "h2",
+        "h3",
+        "h4"
+      ]
+    },
+    "styleVariant": {
+      "type": "enumeration",
+      "default": "standard",
+      "enum": [
+        "standard",
+        "highlight",
+        "muted"
+      ]
+    },
+    "alignment": {
+      "type": "enumeration",
+      "default": "left",
+      "enum": [
+        "left",
+        "center",
+        "right"
+      ]
+    }
+  },
+  "config": {}
+}

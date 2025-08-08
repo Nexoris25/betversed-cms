@@ -1,0 +1,61 @@
+{
+  "kind": "singleType",
+  "collectionName": "education_hubs",
+  "info": {
+    "singularName": "education-hub",
+    "pluralName": "education-hubs",
+    "displayName": "Education Hub"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "pageTitle": {
+      "type": "string",
+      "maxLength": 80,
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "pageTitle"
+    },
+    "leadText": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "seoMeta": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
+    },
+    "lastUpdated": {
+      "type": "date"
+    },
+    "mainContent": {
+      "type": "dynamiczone",
+      "components": [
+        "shared.rich-text",
+        "shared.pros-cons",
+        "shared.key-point",
+        "shared.heading",
+        "shared.callout-box",
+        "shared.button-link",
+        "shared.badge-label"
+      ]
+    },
+    "faqsSection": {
+      "type": "component",
+      "component": "shared.faqs-content",
+      "repeatable": false
+    },
+    "infoSources": {
+      "type": "component",
+      "component": "shared.source-attribution",
+      "repeatable": false
+    }
+  }
+}

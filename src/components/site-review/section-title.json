@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_site_review_section_titles",
+  "info": {
+    "displayName": "sectionTitle"
+  },
+  "options": {},
+  "attributes": {
+    "features": {
+      "type": "component",
+      "component": "shared.feature-card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

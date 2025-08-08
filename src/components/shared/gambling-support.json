@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_shared_gambling_supports",
+  "info": {
+    "displayName": "gamblingSupport"
+  },
+  "options": {},
+  "attributes": {
+    "agencyName": {
+      "type": "string"
+    },
+    "agencyLogo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "contactInfo": {
+      "type": "string"
+    },
+    "supportType": {
+      "type": "enumeration",
+      "enum": [
+        "Helpline",
+        "NGO",
+        "Self-ban"
+      ]
+    },
+    "agencyDescription": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    }
+  },
+  "config": {}
+}

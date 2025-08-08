@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_country_top_bonuses_sections",
+  "info": {
+    "displayName": "topBonusesSection"
+  },
+  "options": {},
+  "attributes": {
+    "sectionTitle": {
+      "type": "string"
+    },
+    "sectionIntro": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "topBonuses": {
+      "type": "component",
+      "component": "shared.bonus-card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

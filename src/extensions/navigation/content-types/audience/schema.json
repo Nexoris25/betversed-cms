@@ -1,0 +1,15 @@
+{
+  "kind": "collectionType",
+  "collectionName": "audience",
+  "info": {
+    "singularName": "audience",
+    "pluralName": "audiences",
+    "displayName": "Audience",
+    "name": "audience"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {}
+}

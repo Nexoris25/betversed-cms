@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_shared_responsible_gambling_tools",
+  "info": {
+    "displayName": "responsibleGamblingTools"
+  },
+  "options": {},
+  "attributes": {
+    "tool": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "description": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "maxLengthWords": 150,
+        "preset": "defaultHtml"
+      }
+    }
+  },
+  "config": {}
+}

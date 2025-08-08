@@ -1,0 +1,83 @@
+{
+  "collectionName": "components_shared_bonus_cards",
+  "info": {
+    "displayName": "bonusCard"
+  },
+  "options": {},
+  "attributes": {
+    "bookmakerLogo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "bookmakerName": {
+      "type": "string"
+    },
+    "offerTitle": {
+      "type": "string"
+    },
+    "offerValue": {
+      "type": "string"
+    },
+    "testedBy": {
+      "type": "component",
+      "component": "shared.key-point",
+      "repeatable": false
+    },
+    "promoCode": {
+      "type": "string"
+    },
+    "CTA": {
+      "type": "component",
+      "component": "shared.button-link",
+      "repeatable": false
+    },
+    "minDeposit": {
+      "type": "string"
+    },
+    "wagering": {
+      "type": "string"
+    },
+    "validityPeriod": {
+      "type": "string"
+    },
+    "licensing": {
+      "type": "string"
+    },
+    "prosConsList": {
+      "type": "component",
+      "component": "shared.pros-cons",
+      "repeatable": false
+    },
+    "verdictTitle": {
+      "type": "string"
+    },
+    "verdictSummary": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "isVerified": {
+      "type": "boolean"
+    },
+    "isEditorsPick": {
+      "type": "boolean"
+    },
+    "fullBonusReview": {
+      "type": "component",
+      "component": "shared.button-link",
+      "repeatable": false
+    },
+    "bonusTerms": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

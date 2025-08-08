@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_shared_rich_texts",
+  "info": {
+    "displayName": "richText"
+  },
+  "options": {},
+  "attributes": {
+    "richText": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    }
+  },
+  "config": {}
+}
