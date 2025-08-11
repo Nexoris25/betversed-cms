@@ -82,7 +82,7 @@ export default {
           supportAllValues: false,
         },
         fontSize: {
-          options: [12, 14, 16, 18, 20, 24, 30, 32],
+          options: [12, 14, 16, 18, 20, 24, 30, 32, 38],
           supportAllValues: false,
         },
 

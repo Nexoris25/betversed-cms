@@ -25,6 +25,11 @@
       "type": "component",
       "component": "shared.button-link",
       "repeatable": true
+    },
+    "promoCode": {
+      "type": "component",
+      "component": "shared.promo-code",
+      "repeatable": false
     }
   },
   "config": {}

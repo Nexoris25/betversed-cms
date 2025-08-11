@@ -14,7 +14,7 @@ export default [
           'media-src': ["'self'", 'data:', 'blob:', 'https:'],
           // admin and plugin scripts
           'script-src': ["'self'", 'https:', "'unsafe-inline'"],
-          // ✅ Google Fonts (or remove these if you self-host)
+          // Google Fonts (or remove these if you self-host)
           'style-src': ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com'],
           'font-src': ["'self'", 'data:', 'https://fonts.gstatic.com'],
           // (optional) enable embedded previews in plugins/editors

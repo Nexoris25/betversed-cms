@@ -7,10 +7,10 @@
   "attributes": {
     "Tester": {
       "type": "component",
-      "component": "shared.key-point",
+      "component": "shared.item",
       "repeatable": true
     },
-    "countryTested": {
+    "testCountry": {
       "type": "string"
     }
   },

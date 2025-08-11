@@ -1,7 +1,7 @@
 {
-  "collectionName": "components_shared_key_points",
+  "collectionName": "components_shared_values",
   "info": {
-    "displayName": "keyPoint"
+    "displayName": "value"
   },
   "options": {},
   "attributes": {

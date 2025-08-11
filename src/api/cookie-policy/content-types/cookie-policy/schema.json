@@ -43,7 +43,6 @@
       "type": "dynamiczone",
       "components": [
         "shared.rich-text",
-        "shared.key-point",
         "shared.heading",
         "shared.button-link",
         "shared.callout-box",

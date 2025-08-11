@@ -11,7 +11,7 @@
     "faqs": {
       "type": "component",
       "component": "shared.faqs",
-      "repeatable": false
+      "repeatable": true
     }
   },
   "config": {}

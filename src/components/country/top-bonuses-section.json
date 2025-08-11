@@ -14,11 +14,6 @@
       "options": {
         "preset": "defaultHtml"
       }
-    },
-    "topBonuses": {
-      "type": "component",
-      "component": "shared.bonus-card",
-      "repeatable": true
     }
   },
   "config": {}

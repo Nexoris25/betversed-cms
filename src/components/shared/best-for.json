@@ -5,9 +5,9 @@
   },
   "options": {},
   "attributes": {
-    "value": {
+    "item": {
       "type": "component",
-      "component": "shared.key-point",
+      "component": "shared.value",
       "repeatable": true
     }
   },

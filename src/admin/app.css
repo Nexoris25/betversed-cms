@@ -7,7 +7,7 @@
 .ck-editor__editable,
 .ck-content {
   font-family: "Kanit", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif !important;
-  font-size: 16px !important;
+  font-size: 16px;
   line-height: 1.65 !important;
 }
 
@@ -70,12 +70,12 @@
 }
 
 /* 6) Standard heading sizes & spacing in content */
-.ck-content h1 { font-size: 2rem;   line-height: 1.25; margin: 1.25em 0 0.5em; }
-.ck-content h2 { font-size: 1.5rem; line-height: 1.3;  margin: 1.15em 0 0.5em; }
-.ck-content h3 { font-size: 1.25rem;line-height: 1.35; margin: 1.1em  0 0.5em; }
-.ck-content h4 { font-size: 1.125rem;line-height: 1.4; margin: 1.05em 0 0.45em; }
-.ck-content h5 { font-size: 1rem;   line-height: 1.45; margin: 1em    0 0.4em; }
-.ck-content h6 { font-size: 0.875rem;line-height: 1.5; margin: 0.9em  0 0.35em; }
+.ck-content_h1 { font-size: 2rem;   line-height: 1.25; margin: 1.25em 0 0.5em; }
+.ck-content_h2 { font-size: 1.5rem; line-height: 1.3;  margin: 1.15em 0 0.5em; }
+.ck-content_h3 { font-size: 1.25rem;line-height: 1.35; margin: 1.1em  0 0.5em; }
+.ck-content_h4 { font-size: 1.125rem;line-height: 1.4; margin: 1.05em 0 0.45em; }
+.ck-content_h5 { font-size: 1rem;   line-height: 1.45; margin: 1em    0 0.4em; }
+.ck-content_h6 { font-size: 0.875rem;line-height: 1.5; margin: 0.9em  0 0.35em; }
 
 /* Lists */
 .ck-content ul,

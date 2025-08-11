@@ -402,7 +402,6 @@ export interface ApiAffiliateDisclosureAffiliateDisclosure
     mainContent: Schema.Attribute.DynamicZone<
       [
         'shared.rich-text',
-        'shared.key-point',
         'shared.heading',
         'shared.button-link',
         'shared.callout-box',
@@ -448,7 +447,6 @@ export interface ApiAuthorAuthor extends Struct.CollectionTypeSchema {
           preset: 'defaultHtml';
         }
       >;
-    expertiseTags: Schema.Attribute.Component<'shared.key-point', true>;
     faqsSection: Schema.Attribute.Component<'shared.faqs-content', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -505,7 +503,6 @@ export interface ApiBettingEducationBettingEducation
         'shared.rich-text',
         'shared.pros-cons',
         'shared.heading',
-        'shared.key-point',
         'shared.gambling-support',
         'shared.button-link',
         'shared.callout-box',
@@ -688,7 +685,6 @@ export interface ApiCookiePolicyCookiePolicy extends Struct.SingleTypeSchema {
     mainContent: Schema.Attribute.DynamicZone<
       [
         'shared.rich-text',
-        'shared.key-point',
         'shared.heading',
         'shared.button-link',
         'shared.callout-box',
@@ -728,12 +724,7 @@ export interface ApiCountryCountry extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     dynamicArea: Schema.Attribute.DynamicZone<
-      [
-        'shared.rich-text',
-        'shared.local-vs-foreign',
-        'shared.button-link',
-        'shared.heading',
-      ]
+      ['shared.rich-text', 'shared.button-link', 'shared.heading']
     >;
     dynamicContent: Schema.Attribute.DynamicZone<
       [
@@ -806,7 +797,6 @@ export interface ApiEditorialPolicyEditorialPolicy
     mainContent: Schema.Attribute.DynamicZone<
       [
         'shared.rich-text',
-        'shared.key-point',
         'shared.heading',
         'shared.button-link',
         'shared.callout-box',
@@ -863,7 +853,6 @@ export interface ApiEducationHubEducationHub extends Struct.SingleTypeSchema {
       [
         'shared.rich-text',
         'shared.pros-cons',
-        'shared.key-point',
         'shared.heading',
         'shared.callout-box',
         'shared.button-link',
@@ -1023,7 +1012,6 @@ export interface ApiTermsOfUseTermsOfUse extends Struct.SingleTypeSchema {
     mainContent: Schema.Attribute.DynamicZone<
       [
         'shared.rich-text',
-        'shared.key-point',
         'shared.heading',
         'shared.button-link',
         'shared.callout-box',

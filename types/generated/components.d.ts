@@ -31,7 +31,6 @@ export interface BonusReviewBonusSummary extends Struct.ComponentSchema {
     displayName: 'bonusSummary';
   };
   attributes: {
-    bestFor: Schema.Attribute.Component<'shared.key-point', true>;
     bonusAmount: Schema.Attribute.String;
     bonusTips: Schema.Attribute.RichText &
       Schema.Attribute.CustomField<
@@ -95,7 +94,6 @@ export interface CountryTopBonusesSection extends Struct.ComponentSchema {
         }
       >;
     sectionTitle: Schema.Attribute.String;
-    topBonuses: Schema.Attribute.Component<'shared.bonus-card', true>;
   };
 }
 
@@ -105,7 +103,6 @@ export interface CountryTopSiteCard extends Struct.ComponentSchema {
     displayName: 'topSiteCard';
   };
   attributes: {
-    bestFor: Schema.Attribute.Component<'shared.key-point', true>;
     bonusText: Schema.Attribute.String;
     bookmakerLogo: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
@@ -114,7 +111,6 @@ export interface CountryTopSiteCard extends Struct.ComponentSchema {
     CTA: Schema.Attribute.Component<'shared.button-link', false>;
     fullReviewLinkText: Schema.Attribute.Component<'shared.button-link', false>;
     isVerified: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
-    licensingTrust: Schema.Attribute.Component<'shared.key-point', true>;
     overallRating: Schema.Attribute.Decimal;
     prosConsList: Schema.Attribute.Component<'shared.pros-cons', false>;
     recommended: Schema.Attribute.Enumeration<
@@ -165,50 +161,6 @@ export interface SharedAffiliateDisclosure extends Struct.ComponentSchema {
   };
 }
 
-export interface SharedAuthorBox extends Struct.ComponentSchema {
-  collectionName: 'components_shared_author_boxes';
-  info: {
-    displayName: 'authorBox';
-  };
-  attributes: {
-    bio: Schema.Attribute.RichText &
-      Schema.Attribute.CustomField<
-        'plugin::ckeditor5.CKEditor',
-        {
-          preset: 'defaultHtml';
-        }
-      >;
-    expertiseTags: Schema.Attribute.Component<'shared.expertise-tag', true>;
-    linkedInUrl: Schema.Attribute.String;
-    linkToAuthorPage: Schema.Attribute.Component<'shared.button-link', false>;
-    name: Schema.Attribute.String & Schema.Attribute.Required;
-    profileImage: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    >;
-    role: Schema.Attribute.String & Schema.Attribute.Required;
-    twitterUrl: Schema.Attribute.String;
-    yearsOfExperience: Schema.Attribute.String;
-  };
-}
-
-export interface SharedAuthorsBlock extends Struct.ComponentSchema {
-  collectionName: 'components_shared_authors_blocks';
-  info: {
-    displayName: 'authorsBlock';
-  };
-  attributes: {
-    authorBox: Schema.Attribute.Component<'shared.author-box', true>;
-    description: Schema.Attribute.RichText &
-      Schema.Attribute.CustomField<
-        'plugin::ckeditor5.CKEditor',
-        {
-          preset: 'defaultHtml';
-        }
-      >;
-    sectionTitle: Schema.Attribute.String;
-  };
-}
-
 export interface SharedBadgeLabel extends Struct.ComponentSchema {
   collectionName: 'components_shared_badge_labels';
   info: {
@@ -228,74 +180,7 @@ export interface SharedBestFor extends Struct.ComponentSchema {
     displayName: 'bestFor';
   };
   attributes: {
-    value: Schema.Attribute.Component<'shared.key-point', true>;
-  };
-}
-
-export interface SharedBonusCard extends Struct.ComponentSchema {
-  collectionName: 'components_shared_bonus_cards';
-  info: {
-    displayName: 'bonusCard';
-  };
-  attributes: {
-    bonusTerms: Schema.Attribute.String;
-    bookmakerLogo: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    >;
-    bookmakerName: Schema.Attribute.String;
-    CTA: Schema.Attribute.Component<'shared.button-link', false>;
-    fullBonusReview: Schema.Attribute.Component<'shared.button-link', false>;
-    isEditorsPick: Schema.Attribute.Boolean;
-    isVerified: Schema.Attribute.Boolean;
-    licensing: Schema.Attribute.String;
-    minDeposit: Schema.Attribute.String;
-    offerTitle: Schema.Attribute.String;
-    offerValue: Schema.Attribute.String;
-    promoCode: Schema.Attribute.String;
-    prosConsList: Schema.Attribute.Component<'shared.pros-cons', false>;
-    testedBy: Schema.Attribute.Component<'shared.key-point', false>;
-    validityPeriod: Schema.Attribute.String;
-    verdictSummary: Schema.Attribute.RichText &
-      Schema.Attribute.CustomField<
-        'plugin::ckeditor5.CKEditor',
-        {
-          preset: 'defaultHtml';
-        }
-      >;
-    verdictTitle: Schema.Attribute.String;
-    wagering: Schema.Attribute.String;
-  };
-}
-
-export interface SharedBookieOrigin extends Struct.ComponentSchema {
-  collectionName: 'components_shared_bookie_origins';
-  info: {
-    displayName: 'bookieOrigin';
-  };
-  attributes: {
-    bookies: Schema.Attribute.String;
-    origin: Schema.Attribute.String;
-    prosConsList: Schema.Attribute.Component<'shared.pros-cons', false>;
-  };
-}
-
-export interface SharedBookmakerComparison extends Struct.ComponentSchema {
-  collectionName: 'components_shared_bookmaker_comparisons';
-  info: {
-    displayName: 'bookmakerComparison';
-  };
-  attributes: {
-    betBuilder: Schema.Attribute.Boolean;
-    bookmakerName: Schema.Attribute.String;
-    liveBetting: Schema.Attribute.Boolean;
-    localLeagueOdds: Schema.Attribute.Boolean;
-    minStake: Schema.Attribute.String;
-    mobileUXRating: Schema.Attribute.Decimal;
-    payoutSpeed: Schema.Attribute.String;
-    streaming: Schema.Attribute.Boolean;
-    supportSpeed: Schema.Attribute.String;
-    wageringRules: Schema.Attribute.String;
-    welcomeBonus: Schema.Attribute.String;
+    item: Schema.Attribute.Component<'shared.value', true>;
   };
 }
 
@@ -343,16 +228,6 @@ export interface SharedDevicesNetwork extends Struct.ComponentSchema {
   };
 }
 
-export interface SharedExpertiseTag extends Struct.ComponentSchema {
-  collectionName: 'components_shared_expertise_tags';
-  info: {
-    displayName: 'expertise-tag';
-  };
-  attributes: {
-    label: Schema.Attribute.String;
-  };
-}
-
 export interface SharedFaqs extends Struct.ComponentSchema {
   collectionName: 'components_shared_faqs';
   info: {
@@ -376,27 +251,8 @@ export interface SharedFaqsContent extends Struct.ComponentSchema {
     displayName: 'faqsContent';
   };
   attributes: {
-    faqs: Schema.Attribute.Component<'shared.faqs', false>;
+    faqs: Schema.Attribute.Component<'shared.faqs', true>;
     faqsTitle: Schema.Attribute.String;
-  };
-}
-
-export interface SharedFeatureCard extends Struct.ComponentSchema {
-  collectionName: 'components_shared_feature_cards';
-  info: {
-    displayName: 'featureCard';
-  };
-  attributes: {
-    description: Schema.Attribute.RichText &
-      Schema.Attribute.CustomField<
-        'plugin::ckeditor5.CKEditor',
-        {
-          preset: 'defaultHtml';
-        }
-      >;
-    icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    isHighlighted: Schema.Attribute.Boolean;
-    title: Schema.Attribute.String;
   };
 }
 
@@ -440,10 +296,10 @@ export interface SharedHeading extends Struct.ComponentSchema {
   };
 }
 
-export interface SharedKeyPoint extends Struct.ComponentSchema {
-  collectionName: 'components_shared_key_points';
+export interface SharedItem extends Struct.ComponentSchema {
+  collectionName: 'components_shared_items';
   info: {
-    displayName: 'keyPoint';
+    displayName: 'item';
   };
   attributes: {
     value: Schema.Attribute.String;
@@ -458,56 +314,6 @@ export interface SharedLicenseInfo extends Struct.ComponentSchema {
   attributes: {
     Operator: Schema.Attribute.String;
     Regulator: Schema.Attribute.Component<'shared.regulator', true>;
-  };
-}
-
-export interface SharedLocalVsForeign extends Struct.ComponentSchema {
-  collectionName: 'components_shared_local_vs_foreigns';
-  info: {
-    displayName: 'localVsForeign';
-  };
-  attributes: {
-    bookmakerOrigin: Schema.Attribute.Component<'shared.bookie-origin', true>;
-    introText: Schema.Attribute.RichText &
-      Schema.Attribute.CustomField<
-        'plugin::ckeditor5.CKEditor',
-        {
-          preset: 'defaultHtml';
-        }
-      >;
-    sectionTitle: Schema.Attribute.String;
-    verdict: Schema.Attribute.RichText &
-      Schema.Attribute.CustomField<
-        'plugin::ckeditor5.CKEditor',
-        {
-          preset: 'defaultHtml';
-        }
-      >;
-    verdictTitle: Schema.Attribute.String;
-  };
-}
-
-export interface SharedPlatformLicense extends Struct.ComponentSchema {
-  collectionName: 'components_shared_platform_licenses';
-  info: {
-    displayName: 'platformLicense';
-  };
-  attributes: {
-    countryCode: Schema.Attribute.Enumeration<['NG', 'GH', 'KE', 'ZA']>;
-    description: Schema.Attribute.RichText &
-      Schema.Attribute.CustomField<
-        'plugin::ckeditor5.CKEditor',
-        {
-          preset: 'defaultHtml';
-        }
-      >;
-    licenseNumber: Schema.Attribute.String & Schema.Attribute.Required;
-    licenseType: Schema.Attribute.Enumeration<
-      ['Sports', 'Casino', 'Virtual', 'Lottery', 'Other']
-    >;
-    licenseUrl: Schema.Attribute.String;
-    licensingBody: Schema.Attribute.String & Schema.Attribute.Required;
-    validFrom: Schema.Attribute.Date;
   };
 }
 
@@ -559,24 +365,6 @@ export interface SharedPublisherInfo extends Struct.ComponentSchema {
     logo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     publisherName: Schema.Attribute.String;
     website: Schema.Attribute.String;
-  };
-}
-
-export interface SharedRegistrationStep extends Struct.ComponentSchema {
-  collectionName: 'components_shared_registration_steps';
-  info: {
-    displayName: 'registrationStep';
-  };
-  attributes: {
-    description: Schema.Attribute.RichText &
-      Schema.Attribute.CustomField<
-        'plugin::ckeditor5.CKEditor',
-        {
-          preset: 'defaultHtml';
-        }
-      >;
-    icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    stepTitle: Schema.Attribute.String;
   };
 }
 
@@ -731,8 +519,8 @@ export interface SharedTestedBy extends Struct.ComponentSchema {
     displayName: 'testedBy';
   };
   attributes: {
-    countryTested: Schema.Attribute.String;
-    Tester: Schema.Attribute.Component<'shared.key-point', true>;
+    testCountry: Schema.Attribute.String;
+    Tester: Schema.Attribute.Component<'shared.item', true>;
   };
 }
 
@@ -757,6 +545,16 @@ export interface SharedTransactionItem extends Struct.ComponentSchema {
       ['success', 'pending', 'failed']
     >;
     transactionType: Schema.Attribute.Enumeration<['deposit', 'withdrawal']>;
+  };
+}
+
+export interface SharedValue extends Struct.ComponentSchema {
+  collectionName: 'components_shared_values';
+  info: {
+    displayName: 'value';
+  };
+  attributes: {
+    value: Schema.Attribute.String;
   };
 }
 
@@ -836,6 +634,7 @@ export interface SiteReviewHeroBlock extends Struct.ComponentSchema {
           preset: 'defaultHtml';
         }
       >;
+    promoCode: Schema.Attribute.Component<'shared.promo-code', false>;
   };
 }
 
@@ -849,31 +648,21 @@ declare module '@strapi/strapi' {
       'country.top-site-card': CountryTopSiteCard;
       'country.top-sites-section': CountryTopSitesSection;
       'shared.affiliate-disclosure': SharedAffiliateDisclosure;
-      'shared.author-box': SharedAuthorBox;
-      'shared.authors-block': SharedAuthorsBlock;
       'shared.badge-label': SharedBadgeLabel;
       'shared.best-for': SharedBestFor;
-      'shared.bonus-card': SharedBonusCard;
-      'shared.bookie-origin': SharedBookieOrigin;
-      'shared.bookmaker-comparison': SharedBookmakerComparison;
       'shared.button-link': SharedButtonLink;
       'shared.callout-box': SharedCalloutBox;
       'shared.devices-network': SharedDevicesNetwork;
-      'shared.expertise-tag': SharedExpertiseTag;
       'shared.faqs': SharedFaqs;
       'shared.faqs-content': SharedFaqsContent;
-      'shared.feature-card': SharedFeatureCard;
       'shared.gambling-support': SharedGamblingSupport;
       'shared.heading': SharedHeading;
-      'shared.key-point': SharedKeyPoint;
+      'shared.item': SharedItem;
       'shared.license-info': SharedLicenseInfo;
-      'shared.local-vs-foreign': SharedLocalVsForeign;
-      'shared.platform-license': SharedPlatformLicense;
       'shared.promo-code': SharedPromoCode;
       'shared.pros-cons': SharedProsCons;
       'shared.pros-cons-item': SharedProsConsItem;
       'shared.publisher-info': SharedPublisherInfo;
-      'shared.registration-step': SharedRegistrationStep;
       'shared.regulator': SharedRegulator;
       'shared.responsible-gambling-tools': SharedResponsibleGamblingTools;
       'shared.rich-text': SharedRichText;
@@ -884,6 +673,7 @@ declare module '@strapi/strapi' {
       'shared.test-window': SharedTestWindow;
       'shared.tested-by': SharedTestedBy;
       'shared.transaction-item': SharedTransactionItem;
+      'shared.value': SharedValue;
       'shared.verdict-block': SharedVerdictBlock;
       'shared.verification-badge': SharedVerificationBadge;
       'site-review.editorial-summary': SiteReviewEditorialSummary;

@@ -34,11 +34,6 @@
       "type": "string",
       "required": true
     },
-    "expertiseTags": {
-      "type": "component",
-      "component": "shared.key-point",
-      "repeatable": true
-    },
     "SocialLinks": {
       "type": "component",
       "component": "shared.social-link",

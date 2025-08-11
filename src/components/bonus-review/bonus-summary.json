@@ -23,11 +23,6 @@
     "promoCodeNeeded": {
       "type": "boolean"
     },
-    "bestFor": {
-      "type": "component",
-      "component": "shared.key-point",
-      "repeatable": true
-    },
     "isVerified": {
       "type": "boolean"
     },
