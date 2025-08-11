@@ -18,10 +18,10 @@ const PRIMARY_TOOLBAR_ITEMS: string[] = [
   'bulletedList',
   'numberedList',
   'alignment',
-  'blockQuote',
   'insertTable',     
   'htmlEmbed',       
   'strapiMediaLib',
+  'blockQuote',
 ];
 
 // Extras live in the overflow (“More”)
