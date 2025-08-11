@@ -1,0 +1,129 @@
+/* src/admin/app.css */
+
+/* 1) Google Fonts: Kanit (default), plus Poppins & Roboto as options */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+/* 2) Default text face inside editor */
+.ck-editor__editable,
+.ck-content {
+  font-family: "Kanit", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif !important;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+/* 3) Compact toolbar (SCOPED ONLY TO TOOLBAR) */
+.ck.ck-toolbar {
+  min-height: 32px;
+  padding: 1px 3px;
+  gap: 1px;
+}
+
+.ck.ck-toolbar .ck-toolbar__separator {
+  margin-inline: 3px;
+}
+
+.ck.ck-toolbar .ck-button {
+  padding: 1px 2px;
+  min-height: 22px;
+  min-width: 22px;
+}
+
+.ck.ck-toolbar .ck-button .ck-icon {
+  width: 12px;
+  height: 12px;
+}
+
+/* 4) Panels/dropdowns: keep CKEditor defaults */
+.ck.ck-dropdown__panel,
+.ck.ck-balloon-panel {
+  z-index: 2147483647; /* above Strapi panes */
+}
+
+/* Ensure buttons/icons inside panels use CK defaults (not toolbar sizes) */
+.ck.ck-dropdown__panel .ck-button,
+.ck.ck-balloon-panel .ck-button {
+  padding: revert;
+  min-height: revert;
+  min-width: revert;
+}
+
+.ck.ck-dropdown__panel .ck-icon,
+.ck.ck-balloon-panel .ck-icon {
+  width: revert;
+  height: revert;
+}
+
+/* 5) Insert Table dropdown: make cells square (height = width) */
+.ck.ck-dropdown__panel .ck-insert-table-dropdown__grid,
+.ck.ck-dropdown__panel .ck-insert-table-dropdown-grid {
+  line-height: 0;                 /* remove inline-block gaps */
+}
+
+.ck.ck-dropdown__panel .ck-insert-table-dropdown__grid-box,
+.ck.ck-dropdown__panel .ck-insert-table-dropdown-grid-box,
+.ck.ck-dropdown__panel .ck-insert-table-dropdown__box {
+  display: inline-block;
+  aspect-ratio: 1 / 1;            /* 👈 ensures height equals width */
+  height: auto !important;        /* compute from width */
+  vertical-align: top;
+  /* Do NOT set width here; let CKEditor control it, we only ensure squareness */
+}
+
+/* 6) Standard heading sizes & spacing in content */
+.ck-content h1 { font-size: 2rem;   line-height: 1.25; margin: 1.25em 0 0.5em; }
+.ck-content h2 { font-size: 1.5rem; line-height: 1.3;  margin: 1.15em 0 0.5em; }
+.ck-content h3 { font-size: 1.25rem;line-height: 1.35; margin: 1.1em  0 0.5em; }
+.ck-content h4 { font-size: 1.125rem;line-height: 1.4; margin: 1.05em 0 0.45em; }
+.ck-content h5 { font-size: 1rem;   line-height: 1.45; margin: 1em    0 0.4em; }
+.ck-content h6 { font-size: 0.875rem;line-height: 1.5; margin: 0.9em  0 0.35em; }
+
+/* Lists */
+.ck-content ul,
+.ck-content ol {
+  margin: 0.75em 0 1em 1.25em;
+  padding: 0;
+}
+
+.ck-content li { margin: 0.25em 0; }
+
+/* Blockquote */
+.ck-content blockquote { margin: 1em 0; }
+
+/* Tables in content */
+.ck-content table { margin: 1rem 0; }
+
+/* 7) Bottom padding so content never collides with field edge/labels */
+.ck-editor__main .ck-content {
+  padding-bottom: 2.75rem;
+}
+
+/* 8) Hide bottom-left “Powered by” label (community builds) */
+.ck .ck-powered-by { display: none !important; }
+
+/* 9) OPTIONAL: Headings dropdown width clamp ONLY for the headings panel */
+.ck.ck-dropdown__panel:has(.ck-heading_heading1) {
+  min-width: 0 !important;
+  width: 180px !important;   /* adjust 160–200px as needed */
+  max-width: 180px !important;
+  overflow: hidden;
+}
+
+.ck.ck-dropdown__panel:has(.ck-heading_heading1) .ck-list {
+  width: 100% !important;
+}
+
+.ck.ck-dropdown__panel:has(.ck-heading_heading1) .ck-list .ck-button .ck-button__label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Tighter gap when a heading follows text (paragraph/list/quote/code/table/figure) */
+.ck-content :where(p, ul, ol, blockquote, pre, table, figure) + :is(h1, h2, h3, h4, h5, h6) {
+  margin-block-start: 0.5em; /* tweak 0.4–0.7em to taste */
+}
+
+/* Keep a clean top edge when a heading is the very first element */
+.ck-content :is(h1, h2, h3, h4, h5, h6):first-child {
+  margin-block-start: 0;
+}

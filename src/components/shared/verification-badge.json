@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_shared_verification_badges",
+  "info": {
+    "displayName": "verificationBadge"
+  },
+  "options": {},
+  "attributes": {
+    "verifiedBy": {
+      "type": "string",
+      "required": true
+    },
+    "verificationDate": {
+      "type": "date"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_test_windows",
+  "info": {
+    "displayName": "testWindow"
+  },
+  "options": {},
+  "attributes": {
+    "startDate": {
+      "type": "date"
+    },
+    "endDate": {
+      "type": "date"
+    }
+  },
+  "config": {}
+}

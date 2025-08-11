@@ -11,14 +11,13 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "title": {
+    "Title": {
       "type": "string",
       "maxLength": 80,
       "required": true
     },
     "slug": {
       "type": "uid",
-      "targetField": "title",
       "required": true
     },
     "countryCode": {
@@ -48,67 +47,30 @@
     },
     "summaryBox": {
       "type": "component",
-      "component": "site-review.summary-box",
+      "component": "site-review.editorial-summary",
       "repeatable": false
     },
-    "bookmakerLicense": {
-      "type": "component",
-      "component": "site-review.bookie-license",
-      "repeatable": false
-    },
-    "testingDetails": {
-      "type": "component",
-      "component": "site-review.testing-snapshot",
-      "repeatable": false
-    },
-    "prosConsList": {
-      "type": "component",
-      "component": "shared.pros-cons",
-      "repeatable": false
-    },
-    "bookieFeatures": {
-      "type": "component",
-      "component": "site-review.top-features",
-      "repeatable": false
-    },
-    "accountRegistration": {
-      "type": "component",
-      "component": "site-review.registration-steps",
-      "repeatable": false
-    },
-    "paymentMethods": {
-      "type": "component",
-      "component": "site-review.payment-methods",
-      "repeatable": false
-    },
-    "compareBookies": {
-      "type": "component",
-      "component": "site-review.compare-bookies",
-      "repeatable": false
-    },
-    "moreSections": {
+    "mainContent": {
       "type": "dynamiczone",
       "components": [
-        "shared.heading",
         "shared.rich-text",
+        "shared.publisher-info",
+        "shared.badge-label",
         "shared.button-link",
         "shared.callout-box"
       ]
     },
-    "finalVerdict": {
-      "type": "component",
-      "component": "shared.verdict-block",
-      "repeatable": false
-    },
-    "faqsSection": {
+    "FAQs": {
       "type": "component",
       "component": "shared.faqs-content",
       "repeatable": false
     },
-    "infoSources": {
-      "type": "component",
-      "component": "shared.source-attribution",
-      "repeatable": false
+    "evidenceHub": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
     }
   }
 }

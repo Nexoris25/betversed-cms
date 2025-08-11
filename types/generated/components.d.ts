@@ -222,6 +222,16 @@ export interface SharedBadgeLabel extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedBestFor extends Struct.ComponentSchema {
+  collectionName: 'components_shared_best_fors';
+  info: {
+    displayName: 'bestFor';
+  };
+  attributes: {
+    Value: Schema.Attribute.String;
+  };
+}
+
 export interface SharedBonusCard extends Struct.ComponentSchema {
   collectionName: 'components_shared_bonus_cards';
   info: {
@@ -319,6 +329,17 @@ export interface SharedCalloutBox extends Struct.ComponentSchema {
     type: Schema.Attribute.Enumeration<
       ['info', 'warning', 'tip', 'note', 'editor-pick']
     >;
+  };
+}
+
+export interface SharedDevicesNetwork extends Struct.ComponentSchema {
+  collectionName: 'components_shared_devices_networks';
+  info: {
+    displayName: 'devicesNetwork';
+  };
+  attributes: {
+    devicesUsed: Schema.Attribute.String & Schema.Attribute.Required;
+    Network: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -424,8 +445,17 @@ export interface SharedKeyPoint extends Struct.ComponentSchema {
   info: {
     displayName: 'keyPoint';
   };
+  attributes: {};
+}
+
+export interface SharedLicenseInfo extends Struct.ComponentSchema {
+  collectionName: 'components_shared_license_infos';
+  info: {
+    displayName: 'licenseInfo';
+  };
   attributes: {
-    keyPoint: Schema.Attribute.String;
+    Operator: Schema.Attribute.String;
+    Regulator: Schema.Attribute.Component<'shared.regulator', true>;
   };
 }
 
@@ -545,6 +575,18 @@ export interface SharedRegistrationStep extends Struct.ComponentSchema {
       >;
     icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     stepTitle: Schema.Attribute.String;
+  };
+}
+
+export interface SharedRegulator extends Struct.ComponentSchema {
+  collectionName: 'components_shared_regulators';
+  info: {
+    displayName: 'regulator';
+  };
+  attributes: {
+    casinoLicenseNo: Schema.Attribute.String;
+    Name: Schema.Attribute.String;
+    sportsbookLicenseNo: Schema.Attribute.String;
   };
 }
 
@@ -670,6 +712,28 @@ export interface SharedSourceAttribution extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedTestWindow extends Struct.ComponentSchema {
+  collectionName: 'components_shared_test_windows';
+  info: {
+    displayName: 'testWindow';
+  };
+  attributes: {
+    endDate: Schema.Attribute.Date;
+    startDate: Schema.Attribute.Date;
+  };
+}
+
+export interface SharedTestedBy extends Struct.ComponentSchema {
+  collectionName: 'components_shared_tested_bies';
+  info: {
+    displayName: 'testedBy';
+  };
+  attributes: {
+    countryTested: Schema.Attribute.String;
+    Tester: Schema.Attribute.Component<'shared.key-point', true>;
+  };
+}
+
 export interface SharedTransactionItem extends Struct.ComponentSchema {
   collectionName: 'components_shared_transaction_items';
   info: {
@@ -720,39 +784,30 @@ export interface SharedVerdictBlock extends Struct.ComponentSchema {
   };
 }
 
-export interface SiteReviewBookieLicense extends Struct.ComponentSchema {
-  collectionName: 'components_site_review_bookie_licenses';
+export interface SharedVerificationBadge extends Struct.ComponentSchema {
+  collectionName: 'components_shared_verification_badges';
   info: {
-    displayName: 'bookieLicense';
+    displayName: 'verificationBadge';
   };
   attributes: {
-    licenseInfo: Schema.Attribute.Component<'shared.platform-license', true>;
-    registeredName: Schema.Attribute.String;
+    verificationDate: Schema.Attribute.Date;
+    verifiedBy: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
-export interface SiteReviewCompareBookies extends Struct.ComponentSchema {
-  collectionName: 'components_site_review_compare_bookies';
+export interface SiteReviewEditorialSummary extends Struct.ComponentSchema {
+  collectionName: 'components_site_review_editorial_summaries';
   info: {
-    displayName: 'compareBookies';
+    displayName: 'editorialSummary';
   };
   attributes: {
-    bookmakers: Schema.Attribute.Component<'shared.bookmaker-comparison', true>;
-    notes: Schema.Attribute.RichText &
-      Schema.Attribute.CustomField<
-        'plugin::ckeditor5.CKEditor',
-        {
-          preset: 'defaultHtml';
-        }
-      >;
-    sectionIntro: Schema.Attribute.RichText &
-      Schema.Attribute.CustomField<
-        'plugin::ckeditor5.CKEditor',
-        {
-          preset: 'defaultHtml';
-        }
-      >;
-    sectionTitle: Schema.Attribute.String;
+    bestFor: Schema.Attribute.Component<'shared.best-for', true>;
+    devicesNetwork: Schema.Attribute.Component<'shared.devices-network', false>;
+    prosConsList: Schema.Attribute.Component<'shared.pros-cons', false>;
+    Rating: Schema.Attribute.Decimal & Schema.Attribute.Required;
+    testedBy: Schema.Attribute.Component<'shared.tested-by', true>;
+    testWindow: Schema.Attribute.Component<'shared.test-window', false>;
+    verifiedBy: Schema.Attribute.Component<'shared.verification-badge', false>;
   };
 }
 
@@ -765,7 +820,6 @@ export interface SiteReviewHeroBlock extends Struct.ComponentSchema {
     bookmakerLogo: Schema.Attribute.Media<'images' | 'files'> &
       Schema.Attribute.Required;
     callToAction: Schema.Attribute.Component<'shared.button-link', true>;
-    countryTested: Schema.Attribute.String;
     leadText: Schema.Attribute.RichText &
       Schema.Attribute.CustomField<
         'plugin::ckeditor5.CKEditor',
@@ -773,143 +827,6 @@ export interface SiteReviewHeroBlock extends Struct.ComponentSchema {
           preset: 'defaultHtml';
         }
       >;
-    ratingScore: Schema.Attribute.Decimal;
-    testingDevices: Schema.Attribute.RichText &
-      Schema.Attribute.CustomField<
-        'plugin::ckeditor5.CKEditor',
-        {
-          preset: 'defaultHtml';
-        }
-      >;
-  };
-}
-
-export interface SiteReviewPaymentMethods extends Struct.ComponentSchema {
-  collectionName: 'components_site_review_payment_methods';
-  info: {
-    displayName: 'paymentMethods';
-  };
-  attributes: {
-    authorNote: Schema.Attribute.RichText &
-      Schema.Attribute.CustomField<
-        'plugin::ckeditor5.CKEditor',
-        {
-          preset: 'defaultHtml';
-        }
-      >;
-    deposits: Schema.Attribute.Component<'shared.transaction-item', true>;
-    sectionIntro: Schema.Attribute.RichText &
-      Schema.Attribute.CustomField<
-        'plugin::ckeditor5.CKEditor',
-        {
-          preset: 'defaultHtml';
-        }
-      >;
-    sectionTitle: Schema.Attribute.String;
-    withdrawals: Schema.Attribute.Component<'shared.transaction-item', true>;
-  };
-}
-
-export interface SiteReviewRegistrationSteps extends Struct.ComponentSchema {
-  collectionName: 'components_site_review_registration_steps';
-  info: {
-    displayName: 'registrationSteps';
-  };
-  attributes: {
-    sectionIntro: Schema.Attribute.RichText &
-      Schema.Attribute.CustomField<
-        'plugin::ckeditor5.CKEditor',
-        {
-          preset: 'defaultHtml';
-        }
-      >;
-    sectionTips: Schema.Attribute.RichText &
-      Schema.Attribute.CustomField<
-        'plugin::ckeditor5.CKEditor',
-        {
-          preset: 'defaultHtml';
-        }
-      >;
-    sectionTitle: Schema.Attribute.String;
-    step: Schema.Attribute.Component<'shared.registration-step', true>;
-  };
-}
-
-export interface SiteReviewSectionTitle extends Struct.ComponentSchema {
-  collectionName: 'components_site_review_section_titles';
-  info: {
-    displayName: 'sectionTitle';
-  };
-  attributes: {
-    features: Schema.Attribute.Component<'shared.feature-card', true>;
-  };
-}
-
-export interface SiteReviewSummaryBox extends Struct.ComponentSchema {
-  collectionName: 'components_site_review_summary_boxes';
-  info: {
-    displayName: 'summaryBox';
-  };
-  attributes: {
-    bestFor: Schema.Attribute.Component<'shared.key-point', true>;
-    callToAction: Schema.Attribute.Component<'shared.button-link', true>;
-    headline: Schema.Attribute.String;
-    isVerified: Schema.Attribute.Boolean;
-    promoCode: Schema.Attribute.Component<'shared.promo-code', false>;
-    ProsConsList: Schema.Attribute.Component<'shared.pros-cons', false>;
-    summaryScore: Schema.Attribute.Decimal;
-    summaryText: Schema.Attribute.RichText &
-      Schema.Attribute.CustomField<
-        'plugin::ckeditor5.CKEditor',
-        {
-          preset: 'defaultHtml';
-        }
-      >;
-    testedBy: Schema.Attribute.Component<'shared.key-point', false>;
-    verificationIcon: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    >;
-    verificationText: Schema.Attribute.String;
-  };
-}
-
-export interface SiteReviewTestingSnapshot extends Struct.ComponentSchema {
-  collectionName: 'components_site_review_testing_snapshots';
-  info: {
-    displayName: 'testingSnapshot';
-  };
-  attributes: {
-    dateTested: Schema.Attribute.Date;
-    devicesUsed: Schema.Attribute.String;
-    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    loadTimeSeconds: Schema.Attribute.Decimal;
-    networkUsed: Schema.Attribute.String;
-    observations: Schema.Attribute.RichText &
-      Schema.Attribute.CustomField<
-        'plugin::ckeditor5.CKEditor',
-        {
-          preset: 'defaultHtml';
-        }
-      >;
-    sectionTitle: Schema.Attribute.String;
-  };
-}
-
-export interface SiteReviewTopFeatures extends Struct.ComponentSchema {
-  collectionName: 'components_site_review_top_features';
-  info: {
-    displayName: 'topFeatures';
-  };
-  attributes: {
-    feature: Schema.Attribute.Component<'shared.feature-card', true>;
-    sectionIntro: Schema.Attribute.RichText &
-      Schema.Attribute.CustomField<
-        'plugin::ckeditor5.CKEditor',
-        {
-          preset: 'defaultHtml';
-        }
-      >;
-    sectionTitle: Schema.Attribute.String;
   };
 }
 
@@ -926,11 +843,13 @@ declare module '@strapi/strapi' {
       'shared.author-box': SharedAuthorBox;
       'shared.authors-block': SharedAuthorsBlock;
       'shared.badge-label': SharedBadgeLabel;
+      'shared.best-for': SharedBestFor;
       'shared.bonus-card': SharedBonusCard;
       'shared.bookie-origin': SharedBookieOrigin;
       'shared.bookmaker-comparison': SharedBookmakerComparison;
       'shared.button-link': SharedButtonLink;
       'shared.callout-box': SharedCalloutBox;
+      'shared.devices-network': SharedDevicesNetwork;
       'shared.expertise-tag': SharedExpertiseTag;
       'shared.faqs': SharedFaqs;
       'shared.faqs-content': SharedFaqsContent;
@@ -938,6 +857,7 @@ declare module '@strapi/strapi' {
       'shared.gambling-support': SharedGamblingSupport;
       'shared.heading': SharedHeading;
       'shared.key-point': SharedKeyPoint;
+      'shared.license-info': SharedLicenseInfo;
       'shared.local-vs-foreign': SharedLocalVsForeign;
       'shared.platform-license': SharedPlatformLicense;
       'shared.promo-code': SharedPromoCode;
@@ -945,23 +865,20 @@ declare module '@strapi/strapi' {
       'shared.pros-cons-item': SharedProsConsItem;
       'shared.publisher-info': SharedPublisherInfo;
       'shared.registration-step': SharedRegistrationStep;
+      'shared.regulator': SharedRegulator;
       'shared.responsible-gambling-tools': SharedResponsibleGamblingTools;
       'shared.rich-text': SharedRichText;
       'shared.robots-txt': SharedRobotsTxt;
       'shared.seo': SharedSeo;
       'shared.social-link': SharedSocialLink;
       'shared.source-attribution': SharedSourceAttribution;
+      'shared.test-window': SharedTestWindow;
+      'shared.tested-by': SharedTestedBy;
       'shared.transaction-item': SharedTransactionItem;
       'shared.verdict-block': SharedVerdictBlock;
-      'site-review.bookie-license': SiteReviewBookieLicense;
-      'site-review.compare-bookies': SiteReviewCompareBookies;
+      'shared.verification-badge': SharedVerificationBadge;
+      'site-review.editorial-summary': SiteReviewEditorialSummary;
       'site-review.hero-block': SiteReviewHeroBlock;
-      'site-review.payment-methods': SiteReviewPaymentMethods;
-      'site-review.registration-steps': SiteReviewRegistrationSteps;
-      'site-review.section-title': SiteReviewSectionTitle;
-      'site-review.summary-box': SiteReviewSummaryBox;
-      'site-review.testing-snapshot': SiteReviewTestingSnapshot;
-      'site-review.top-features': SiteReviewTopFeatures;
     }
   }
 }

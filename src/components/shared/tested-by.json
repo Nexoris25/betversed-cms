@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_tested_bies",
+  "info": {
+    "displayName": "testedBy"
+  },
+  "options": {},
+  "attributes": {
+    "Tester": {
+      "type": "component",
+      "component": "shared.key-point",
+      "repeatable": true
+    },
+    "countryTested": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

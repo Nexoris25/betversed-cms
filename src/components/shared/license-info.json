@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_license_infos",
+  "info": {
+    "displayName": "licenseInfo"
+  },
+  "options": {},
+  "attributes": {
+    "Operator": {
+      "type": "string"
+    },
+    "Regulator": {
+      "type": "component",
+      "component": "shared.regulator",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

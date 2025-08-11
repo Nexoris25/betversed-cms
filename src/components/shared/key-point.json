@@ -4,10 +4,6 @@
     "displayName": "keyPoint"
   },
   "options": {},
-  "attributes": {
-    "keyPoint": {
-      "type": "string"
-    }
-  },
+  "attributes": {},
   "config": {}
 }

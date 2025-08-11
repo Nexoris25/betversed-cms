@@ -1,0 +1,44 @@
+{
+  "collectionName": "components_site_review_editorial_summaries",
+  "info": {
+    "displayName": "editorialSummary"
+  },
+  "options": {},
+  "attributes": {
+    "Rating": {
+      "type": "decimal",
+      "required": true
+    },
+    "verifiedBy": {
+      "type": "component",
+      "component": "shared.verification-badge",
+      "repeatable": false
+    },
+    "testedBy": {
+      "type": "component",
+      "component": "shared.tested-by",
+      "repeatable": true
+    },
+    "testWindow": {
+      "type": "component",
+      "component": "shared.test-window",
+      "repeatable": false
+    },
+    "devicesNetwork": {
+      "type": "component",
+      "component": "shared.devices-network",
+      "repeatable": false
+    },
+    "bestFor": {
+      "type": "component",
+      "component": "shared.best-for",
+      "repeatable": true
+    },
+    "prosConsList": {
+      "type": "component",
+      "component": "shared.pros-cons",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

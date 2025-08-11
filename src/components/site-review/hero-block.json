@@ -25,19 +25,6 @@
       "type": "component",
       "component": "shared.button-link",
       "repeatable": true
-    },
-    "ratingScore": {
-      "type": "decimal"
-    },
-    "countryTested": {
-      "type": "string"
-    },
-    "testingDevices": {
-      "type": "customField",
-      "customField": "plugin::ckeditor5.CKEditor",
-      "options": {
-        "preset": "defaultHtml"
-      }
     }
   },
   "config": {}

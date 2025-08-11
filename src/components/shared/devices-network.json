@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_devices_networks",
+  "info": {
+    "displayName": "devicesNetwork"
+  },
+  "options": {},
+  "attributes": {
+    "devicesUsed": {
+      "type": "string",
+      "required": true
+    },
+    "Network": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}

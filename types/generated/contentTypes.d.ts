@@ -612,30 +612,19 @@ export interface ApiBookmakerBookmaker extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    accountRegistration: Schema.Attribute.Component<
-      'site-review.registration-steps',
-      false
-    >;
-    bookieFeatures: Schema.Attribute.Component<
-      'site-review.top-features',
-      false
-    >;
-    bookmakerLicense: Schema.Attribute.Component<
-      'site-review.bookie-license',
-      false
-    >;
-    compareBookies: Schema.Attribute.Component<
-      'site-review.compare-bookies',
-      false
-    >;
     countryCode: Schema.Attribute.Enumeration<['ng', 'gh', 'ke', 'za']>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    faqsSection: Schema.Attribute.Component<'shared.faqs-content', false>;
-    finalVerdict: Schema.Attribute.Component<'shared.verdict-block', false>;
+    evidenceHub: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    FAQs: Schema.Attribute.Component<'shared.faqs-content', false>;
     heroSection: Schema.Attribute.Component<'site-review.hero-block', false>;
-    infoSources: Schema.Attribute.Component<'shared.source-attribution', false>;
     isFeatured: Schema.Attribute.Boolean;
     lastUpdated: Schema.Attribute.Date;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
@@ -644,28 +633,23 @@ export interface ApiBookmakerBookmaker extends Struct.CollectionTypeSchema {
       'api::bookmaker.bookmaker'
     > &
       Schema.Attribute.Private;
-    moreSections: Schema.Attribute.DynamicZone<
+    mainContent: Schema.Attribute.DynamicZone<
       [
-        'shared.heading',
         'shared.rich-text',
+        'shared.publisher-info',
+        'shared.badge-label',
         'shared.button-link',
         'shared.callout-box',
       ]
     >;
-    paymentMethods: Schema.Attribute.Component<
-      'site-review.payment-methods',
-      false
-    >;
-    prosConsList: Schema.Attribute.Component<'shared.pros-cons', false>;
     publishedAt: Schema.Attribute.DateTime;
     seoMeta: Schema.Attribute.Component<'shared.seo', false>;
-    slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
-    summaryBox: Schema.Attribute.Component<'site-review.summary-box', false>;
-    testingDetails: Schema.Attribute.Component<
-      'site-review.testing-snapshot',
+    slug: Schema.Attribute.UID & Schema.Attribute.Required;
+    summaryBox: Schema.Attribute.Component<
+      'site-review.editorial-summary',
       false
     >;
-    title: Schema.Attribute.String &
+    Title: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetMinMaxLength<{
         maxLength: 80;

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_regulators",
+  "info": {
+    "displayName": "regulator"
+  },
+  "options": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "sportsbookLicenseNo": {
+      "type": "string"
+    },
+    "casinoLicenseNo": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
