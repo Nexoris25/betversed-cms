@@ -39,6 +39,11 @@
       "component": "shared.pros-cons",
       "repeatable": false
     },
+    "licenseInfo": {
+      "type": "component",
+      "component": "shared.license-info",
+      "repeatable": false
+    },
     "editorialSummary": {
       "type": "customField",
       "customField": "plugin::ckeditor5.CKEditor",

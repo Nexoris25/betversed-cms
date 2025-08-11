@@ -405,7 +405,7 @@ export interface SharedRichText extends Struct.ComponentSchema {
     displayName: 'richText';
   };
   attributes: {
-    richText: Schema.Attribute.RichText &
+    RichText: Schema.Attribute.RichText &
       Schema.Attribute.CustomField<
         'plugin::ckeditor5.CKEditor',
         {
@@ -610,6 +610,7 @@ export interface SiteReviewEditorialSummary extends Struct.ComponentSchema {
           preset: 'defaultHtml';
         }
       >;
+    licenseInfo: Schema.Attribute.Component<'shared.license-info', false>;
     prosConsList: Schema.Attribute.Component<'shared.pros-cons', false>;
     Rating: Schema.Attribute.Decimal & Schema.Attribute.Required;
     testedBy: Schema.Attribute.Component<'shared.tested-by', false>;

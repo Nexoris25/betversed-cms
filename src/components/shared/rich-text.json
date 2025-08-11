@@ -5,7 +5,7 @@
   },
   "options": {},
   "attributes": {
-    "richText": {
+    "RichText": {
       "type": "customField",
       "customField": "plugin::ckeditor5.CKEditor",
       "options": {

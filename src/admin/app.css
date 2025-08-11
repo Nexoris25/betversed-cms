@@ -7,7 +7,7 @@
 .ck-editor__editable,
 .ck-content {
   font-family: "Kanit", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif !important;
-  font-size: 16px;
+  font-size: 16px !important;
   line-height: 1.65 !important;
 }
 

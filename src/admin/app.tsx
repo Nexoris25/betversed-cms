@@ -17,18 +17,18 @@ const PRIMARY_TOOLBAR_ITEMS: string[] = [
   'link',
   'bulletedList',
   'numberedList',
-  'alignment',
   'insertTable',     
   'htmlEmbed',       
   'strapiMediaLib',
   'blockQuote',
+  'alignment',
+  'fontFamily',
+  'fontSize',
 ];
 
 // Extras live in the overflow (“More”)
 const EXTRA_TOOLBAR_ITEMS: string[] = [
   '|',
-  'fontFamily',
-  'fontSize',
   'underline',
   'undo',
   'redo',
