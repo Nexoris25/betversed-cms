@@ -228,7 +228,7 @@ export interface SharedBestFor extends Struct.ComponentSchema {
     displayName: 'bestFor';
   };
   attributes: {
-    Value: Schema.Attribute.String;
+    value: Schema.Attribute.Component<'shared.key-point', true>;
   };
 }
 
@@ -445,7 +445,9 @@ export interface SharedKeyPoint extends Struct.ComponentSchema {
   info: {
     displayName: 'keyPoint';
   };
-  attributes: {};
+  attributes: {
+    value: Schema.Attribute.String;
+  };
 }
 
 export interface SharedLicenseInfo extends Struct.ComponentSchema {
@@ -801,11 +803,18 @@ export interface SiteReviewEditorialSummary extends Struct.ComponentSchema {
     displayName: 'editorialSummary';
   };
   attributes: {
-    bestFor: Schema.Attribute.Component<'shared.best-for', true>;
-    devicesNetwork: Schema.Attribute.Component<'shared.devices-network', false>;
+    bestFor: Schema.Attribute.Component<'shared.best-for', false>;
+    devicesNetwork: Schema.Attribute.Component<'shared.devices-network', true>;
+    editorialSummary: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
     prosConsList: Schema.Attribute.Component<'shared.pros-cons', false>;
     Rating: Schema.Attribute.Decimal & Schema.Attribute.Required;
-    testedBy: Schema.Attribute.Component<'shared.tested-by', true>;
+    testedBy: Schema.Attribute.Component<'shared.tested-by', false>;
     testWindow: Schema.Attribute.Component<'shared.test-window', false>;
     verifiedBy: Schema.Attribute.Component<'shared.verification-badge', false>;
   };

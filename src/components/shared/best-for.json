@@ -5,8 +5,10 @@
   },
   "options": {},
   "attributes": {
-    "Value": {
-      "type": "string"
+    "value": {
+      "type": "component",
+      "component": "shared.key-point",
+      "repeatable": true
     }
   },
   "config": {}

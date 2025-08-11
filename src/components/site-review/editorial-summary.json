@@ -17,7 +17,7 @@
     "testedBy": {
       "type": "component",
       "component": "shared.tested-by",
-      "repeatable": true
+      "repeatable": false
     },
     "testWindow": {
       "type": "component",
@@ -27,17 +27,24 @@
     "devicesNetwork": {
       "type": "component",
       "component": "shared.devices-network",
-      "repeatable": false
+      "repeatable": true
     },
     "bestFor": {
       "type": "component",
       "component": "shared.best-for",
-      "repeatable": true
+      "repeatable": false
     },
     "prosConsList": {
       "type": "component",
       "component": "shared.pros-cons",
       "repeatable": false
+    },
+    "editorialSummary": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
     }
   },
   "config": {}
