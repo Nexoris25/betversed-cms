@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_shared_badge_labels",
+  "info": {
+    "displayName": "badgeLabel"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "colour": {
+      "type": "enumeration",
+      "enum": [
+        "green",
+        "orange",
+        "blue",
+        "gray",
+        "red"
+      ]
+    }
+  },
+  "config": {}
+}

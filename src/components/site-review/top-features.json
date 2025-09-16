@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_site_review_top_features",
+  "info": {
+    "displayName": "topFeatures"
+  },
+  "options": {},
+  "attributes": {
+    "sectionTitle": {
+      "type": "string"
+    },
+    "sectionIntro": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "feature": {
+      "type": "component",
+      "component": "shared.feature-card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

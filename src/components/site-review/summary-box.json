@@ -1,0 +1,62 @@
+{
+  "collectionName": "components_site_review_summary_boxes",
+  "info": {
+    "displayName": "summaryBox"
+  },
+  "options": {},
+  "attributes": {
+    "headline": {
+      "type": "string"
+    },
+    "summaryScore": {
+      "type": "decimal"
+    },
+    "bestFor": {
+      "type": "component",
+      "component": "shared.key-point",
+      "repeatable": true
+    },
+    "summaryText": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "callToAction": {
+      "type": "component",
+      "component": "shared.button-link",
+      "repeatable": true
+    },
+    "isVerified": {
+      "type": "boolean"
+    },
+    "verificationText": {
+      "type": "string"
+    },
+    "verificationIcon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "ProsConsList": {
+      "type": "component",
+      "component": "shared.pros-cons",
+      "repeatable": false
+    },
+    "testedBy": {
+      "type": "component",
+      "component": "shared.key-point",
+      "repeatable": true
+    },
+    "promoCode": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

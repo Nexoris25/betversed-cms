@@ -1,0 +1,50 @@
+{
+  "collectionName": "components_shared_platform_licenses",
+  "info": {
+    "displayName": "platformLicense"
+  },
+  "options": {},
+  "attributes": {
+    "licenseNumber": {
+      "type": "string",
+      "required": true
+    },
+    "licensingBody": {
+      "type": "string",
+      "required": true
+    },
+    "licenseType": {
+      "type": "enumeration",
+      "enum": [
+        "Sports",
+        "Casino",
+        "Virtual",
+        "Lottery",
+        "Other"
+      ]
+    },
+    "countryCode": {
+      "type": "enumeration",
+      "enum": [
+        "NG",
+        "GH",
+        "KE",
+        "ZA"
+      ]
+    },
+    "licenseUrl": {
+      "type": "string"
+    },
+    "validFrom": {
+      "type": "date"
+    },
+    "description": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    }
+  },
+  "config": {}
+}

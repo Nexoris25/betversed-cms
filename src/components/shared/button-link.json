@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_shared_button_links",
+  "info": {
+    "displayName": "buttonLink"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "newTab": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "config": {}
+}

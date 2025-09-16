@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_faqs_contents",
+  "info": {
+    "displayName": "faqsContent"
+  },
+  "options": {},
+  "attributes": {
+    "faqsTitle": {
+      "type": "string"
+    },
+    "faqs": {
+      "type": "component",
+      "component": "shared.faqs",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

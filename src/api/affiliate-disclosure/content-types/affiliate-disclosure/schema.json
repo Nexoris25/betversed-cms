@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "affiliate_disclosures",
+  "info": {
+    "singularName": "affiliate-disclosure",
+    "pluralName": "affiliate-disclosures",
+    "displayName": "Affiliate Disclosure"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "affiliateDisclosure": {
+      "type": "string"
+    },
+    "content": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml",
+        "maxLengthWords": 200
+      },
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_site_review_compare_bookies",
+  "info": {
+    "displayName": "compareBookies"
+  },
+  "options": {},
+  "attributes": {
+    "sectionTitle": {
+      "type": "string"
+    },
+    "sectionIntro": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "bookmakers": {
+      "type": "component",
+      "component": "shared.bookmaker-comparison",
+      "repeatable": true
+    },
+    "notes": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    }
+  },
+  "config": {}
+}

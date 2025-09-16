@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_expertise_tags",
+  "info": {
+    "displayName": "expertise-tag"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
