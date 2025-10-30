@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_country_top_sites_sections",
+  "info": {
+    "displayName": "topSitesSection"
+  },
+  "options": {},
+  "attributes": {
+    "sectionTitle": {
+      "type": "string"
+    },
+    "sectionIntro": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "topSites": {
+      "type": "component",
+      "component": "country.top-site-card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

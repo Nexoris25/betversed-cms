@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_shared_pros",
+  "info": {
+    "displayName": "pros"
+  },
+  "options": {},
+  "attributes": {
+    "item": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}

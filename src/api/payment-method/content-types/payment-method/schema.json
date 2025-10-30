@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "payment_methods",
+  "info": {
+    "singularName": "payment-method",
+    "pluralName": "payment-methods",
+    "displayName": "payment method"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "depositspeed": {
+      "type": "string"
+    },
+    "withdrawalspeed": {
+      "type": "string"
+    },
+    "fees": {
+      "type": "string"
+    },
+    "acceptableat": {
+      "type": "string"
+    },
+    "bonuseligible": {
+      "type": "enumeration",
+      "required": true,
+      "default": "Yes",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    }
+  }
+}

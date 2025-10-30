@@ -1,0 +1,76 @@
+{
+  "collectionName": "components_country_top_site_cards",
+  "info": {
+    "displayName": "topSiteCard"
+  },
+  "options": {},
+  "attributes": {
+    "bookmakerLogo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "bookmakerName": {
+      "type": "string"
+    },
+    "overallRating": {
+      "type": "decimal"
+    },
+    "recommended": {
+      "type": "enumeration",
+      "enum": [
+        "recommended",
+        "neutral",
+        "not_recommended"
+      ]
+    },
+    "bonusText": {
+      "type": "string"
+    },
+    "CTA": {
+      "type": "component",
+      "component": "shared.button-link",
+      "repeatable": false
+    },
+    "isVerified": {
+      "type": "boolean",
+      "default": true
+    },
+    "testedBy": {
+      "type": "string"
+    },
+    "bestFor": {
+      "type": "component",
+      "component": "shared.key-point",
+      "repeatable": true
+    },
+    "prosConsList": {
+      "type": "component",
+      "component": "shared.pros-cons",
+      "repeatable": false
+    },
+    "summary": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "licensingTrust": {
+      "type": "component",
+      "component": "shared.key-point",
+      "repeatable": true
+    },
+    "fullReviewLinkText": {
+      "type": "component",
+      "component": "shared.button-link",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

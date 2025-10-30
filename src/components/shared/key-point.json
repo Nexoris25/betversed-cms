@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_key_points",
+  "info": {
+    "displayName": "keyPoint"
+  },
+  "options": {},
+  "attributes": {
+    "keyPoint": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

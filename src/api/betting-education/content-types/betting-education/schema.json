@@ -1,0 +1,96 @@
+{
+  "kind": "collectionType",
+  "collectionName": "betting_educations",
+  "info": {
+    "singularName": "betting-education",
+    "pluralName": "betting-educations",
+    "displayName": "Betting Education"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "pageTitle": {
+      "type": "string",
+      "maxLength": 80,
+      "required": true
+    },
+    "slu": {
+      "type": "uid",
+      "targetField": "pageTitle",
+      "required": true
+    },
+    "readTime": {
+      "type": "integer",
+      "required": true
+    },
+    "excerpt": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml",
+        "maxLengthWords": 200
+      }
+    },
+    "featuredImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "seoMeta": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
+    },
+    "publishedDate": {
+      "type": "date"
+    },
+    "contentBlock": {
+      "type": "dynamiczone",
+      "components": [
+        "shared.rich-text",
+        "shared.pros-cons",
+        "shared.heading",
+        "shared.key-point",
+        "shared.gambling-support",
+        "shared.button-link",
+        "shared.callout-box",
+        "shared.badge-label"
+      ]
+    },
+    "faqsSection": {
+      "type": "component",
+      "component": "shared.faqs-content",
+      "repeatable": false
+    },
+    "category": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "Beginner",
+        "Strategy",
+        "Glossary"
+      ]
+    },
+    "authors_page": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::author.author"
+    },
+    "type": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "Guide",
+        "Tip",
+        "Others"
+      ]
+    }
+  }
+}

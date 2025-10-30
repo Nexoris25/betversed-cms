@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_shared_callout_boxes",
+  "info": {
+    "displayName": "calloutBox"
+  },
+  "options": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "info",
+        "warning",
+        "tip",
+        "note",
+        "editor-pick"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "body": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

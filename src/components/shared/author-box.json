@@ -1,0 +1,54 @@
+{
+  "collectionName": "components_shared_author_boxes",
+  "info": {
+    "displayName": "authorBox"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "role": {
+      "type": "string",
+      "required": true
+    },
+    "profileImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "bio": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "linkedInUrl": {
+      "type": "string"
+    },
+    "twitterUrl": {
+      "type": "string"
+    },
+    "expertiseTags": {
+      "type": "component",
+      "component": "shared.expertise-tag",
+      "repeatable": true
+    },
+    "yearsOfExperience": {
+      "type": "string"
+    },
+    "linkToAuthorPage": {
+      "type": "component",
+      "component": "shared.button-link",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

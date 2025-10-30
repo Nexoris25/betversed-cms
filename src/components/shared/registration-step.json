@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_shared_registration_steps",
+  "info": {
+    "displayName": "registrationStep"
+  },
+  "options": {},
+  "attributes": {
+    "stepTitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

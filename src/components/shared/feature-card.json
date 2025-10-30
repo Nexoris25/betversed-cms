@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_shared_feature_cards",
+  "info": {
+    "displayName": "featureCard"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "isHighlighted": {
+      "type": "boolean"
+    }
+  },
+  "config": {}
+}
