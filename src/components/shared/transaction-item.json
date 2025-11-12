@@ -1,0 +1,51 @@
+{
+  "collectionName": "components_shared_transaction_items",
+  "info": {
+    "displayName": "transactionItem"
+  },
+  "options": {},
+  "attributes": {
+    "method": {
+      "type": "string"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "transactionType": {
+      "type": "enumeration",
+      "enum": [
+        "deposit",
+        "withdrawal"
+      ]
+    },
+    "amount": {
+      "type": "string"
+    },
+    "timeframe": {
+      "type": "string"
+    },
+    "transactionStatus": {
+      "type": "enumeration",
+      "enum": [
+        "success",
+        "pending",
+        "failed"
+      ]
+    },
+    "notes": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    }
+  },
+  "config": {}
+}

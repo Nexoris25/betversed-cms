@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_bookie_origins",
+  "info": {
+    "displayName": "bookieOrigin"
+  },
+  "options": {},
+  "attributes": {
+    "origin": {
+      "type": "string"
+    },
+    "bookies": {
+      "type": "string"
+    },
+    "prosConsList": {
+      "type": "component",
+      "component": "shared.pros-cons",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

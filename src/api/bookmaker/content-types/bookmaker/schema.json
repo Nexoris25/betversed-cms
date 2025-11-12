@@ -1,0 +1,128 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bookmakers",
+  "info": {
+    "singularName": "bookmaker",
+    "pluralName": "bookmakers",
+    "displayName": "Main Review"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "maxLength": 80,
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "countryCode": {
+      "type": "enumeration",
+      "enum": [
+        "ng",
+        "gh",
+        "ke",
+        "za"
+      ]
+    },
+    "isFeatured": {
+      "type": "boolean"
+    },
+    "lastUpdated": {
+      "type": "date"
+    },
+    "seoMeta": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
+    },
+    "heroSection": {
+      "type": "component",
+      "component": "site-review.hero-block",
+      "repeatable": false
+    },
+    "summaryBox": {
+      "type": "component",
+      "component": "site-review.summary-box",
+      "repeatable": false
+    },
+    "bookmakerLicense": {
+      "type": "component",
+      "component": "site-review.bookie-license",
+      "repeatable": false
+    },
+    "testingDetails": {
+      "type": "component",
+      "component": "site-review.testing-snapshot",
+      "repeatable": false
+    },
+    "prosConsList": {
+      "type": "component",
+      "component": "shared.pros-cons",
+      "repeatable": false
+    },
+    "bookieFeatures": {
+      "type": "component",
+      "component": "site-review.top-features",
+      "repeatable": false
+    },
+    "accountRegistration": {
+      "type": "component",
+      "component": "site-review.registration-steps",
+      "repeatable": false
+    },
+    "paymentMethods": {
+      "type": "component",
+      "component": "site-review.payment-methods",
+      "repeatable": false
+    },
+    "compareBookies": {
+      "type": "component",
+      "component": "site-review.compare-bookies",
+      "repeatable": false
+    },
+    "moreSections": {
+      "type": "dynamiczone",
+      "components": [
+        "shared.heading",
+        "shared.rich-text",
+        "shared.button-link",
+        "shared.callout-box"
+      ]
+    },
+    "finalVerdict": {
+      "type": "component",
+      "component": "shared.verdict-block",
+      "repeatable": false
+    },
+    "faqsSection": {
+      "type": "component",
+      "component": "shared.faqs-content",
+      "repeatable": true
+    },
+    "infoSources": {
+      "type": "component",
+      "component": "shared.source-attribution",
+      "repeatable": false
+    },
+    "authors": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::author.author",
+      "mappedBy": "main_review"
+    },
+    "book_maker_name": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::book-maker-list.book-maker-list"
+    },
+    "mainContent": {
+      "type": "blocks"
+    }
+  }
+}

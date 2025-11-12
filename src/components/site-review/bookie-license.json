@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_site_review_bookie_licenses",
+  "info": {
+    "displayName": "bookieLicense"
+  },
+  "options": {},
+  "attributes": {
+    "registeredName": {
+      "type": "string"
+    },
+    "licenseInfo": {
+      "type": "component",
+      "component": "shared.platform-license",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,82 @@
+{
+  "kind": "collectionType",
+  "collectionName": "countries",
+  "info": {
+    "singularName": "country",
+    "pluralName": "countries",
+    "displayName": "Country"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "PageTitle": {
+      "type": "string",
+      "maxLength": 80,
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "required": true
+    },
+    "countryName": {
+      "type": "string",
+      "required": true
+    },
+    "countryCode": {
+      "type": "enumeration",
+      "enum": [
+        "NG",
+        "GH",
+        "KE",
+        "ZA"
+      ]
+    },
+    "seoMeta": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
+    },
+    "dynamicContent": {
+      "type": "dynamiczone",
+      "components": [
+        "shared.heading",
+        "shared.rich-text",
+        "shared.callout-box",
+        "shared.button-link"
+      ]
+    },
+    "responsibleGambling": {
+      "type": "component",
+      "component": "country.responsible-gambling",
+      "repeatable": false
+    },
+    "dynamicArea": {
+      "type": "dynamiczone",
+      "components": [
+        "shared.rich-text",
+        "shared.local-vs-foreign",
+        "shared.button-link",
+        "shared.heading"
+      ]
+    },
+    "dynamicSection": {
+      "type": "dynamiczone",
+      "components": [
+        "shared.button-link",
+        "shared.heading",
+        "shared.rich-text",
+        "shared.verdict-block"
+      ]
+    },
+    "faqsTitle": {
+      "type": "string"
+    },
+    "faq": {
+      "type": "component",
+      "component": "shared.faqs",
+      "repeatable": true
+    }
+  }
+}

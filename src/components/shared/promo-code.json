@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_promo_codes",
+  "info": {
+    "displayName": "promoCode"
+  },
+  "options": {},
+  "attributes": {
+    "code": {
+      "type": "string"
+    },
+    "value": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

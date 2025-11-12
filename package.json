@@ -1,0 +1,50 @@
+{
+  "name": "betversed-cms",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A Strapi application",
+  "scripts": {
+    "build": "strapi build",
+    "console": "strapi console",
+    "deploy": "strapi deploy",
+    "dev": "strapi develop",
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "strapi": "strapi",
+    "upgrade": "npx @strapi/upgrade latest",
+    "upgrade:dry": "npx @strapi/upgrade latest --dry"
+  },
+  "dependencies": {
+    "@_sh/strapi-plugin-ckeditor": "^6.0.2",
+    "@strapi/plugin-cloud": "5.20.0",
+    "@strapi/plugin-seo": "^2.0.8",
+    "@strapi/plugin-users-permissions": "5.20.0",
+    "@strapi/strapi": "5.20.0",
+    "better-sqlite3": "^12.2.0",
+    "pg": "8.8.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^6.0.0",
+    "strapi": "^3.6.11",
+    "strapi-5-sitemap-plugin": "^1.0.7",
+    "strapi-country-select": "^1.1.0",
+    "strapi-google-translator": "^1.0.0",
+    "strapi-plugin-navigation": "^3.0.16",
+    "strapi-plugin-webp-converter": "^1.0.4",
+    "styled-components": "^6.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=18.0.0 <=22.x.x",
+    "npm": ">=6.0.0"
+  },
+  "strapi": {
+    "uuid": "9a51f56b-c71a-41e9-88c2-c0a6b4407dcf",
+    "installId": "72c631c9fee47d9b5da15e553c0e4dd9b05913fadb650d32ef48cf588c90a44e"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "collectionName": "components_site_review_hero_blocks",
+  "info": {
+    "displayName": "heroBlock"
+  },
+  "options": {},
+  "attributes": {
+    "bookmakerLogo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "leadText": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "callToAction": {
+      "type": "component",
+      "component": "shared.button-link",
+      "repeatable": true
+    },
+    "ratingScore": {
+      "type": "decimal"
+    },
+    "countryTested": {
+      "type": "string"
+    },
+    "testingDevices": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "publisher_infos",
+  "info": {
+    "singularName": "publisher-info",
+    "pluralName": "publisher-infos",
+    "displayName": "Publisher Info"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "publisherInfo": {
+      "type": "component",
+      "component": "shared.publisher-info",
+      "repeatable": false
+    }
+  }
+}

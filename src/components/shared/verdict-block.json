@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_shared_verdict_blocks",
+  "info": {
+    "displayName": "verdictBlock"
+  },
+  "options": {},
+  "attributes": {
+    "verdictTitle": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "finalScore": {
+      "type": "decimal"
+    },
+    "closingText": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "callToAction": {
+      "type": "component",
+      "component": "shared.button-link",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

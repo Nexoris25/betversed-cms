@@ -1,0 +1,61 @@
+{
+  "kind": "singleType",
+  "collectionName": "editorial_policies",
+  "info": {
+    "singularName": "editorial-policy",
+    "pluralName": "editorial-policies",
+    "displayName": "Editorial Policy"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "pageTitle": {
+      "type": "string",
+      "maxLength": 80,
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "pageTitle",
+      "required": true
+    },
+    "seoMeta": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
+    },
+    "lastUpdated": {
+      "type": "date"
+    },
+    "coverImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "mainContent": {
+      "type": "dynamiczone",
+      "components": [
+        "shared.rich-text",
+        "shared.key-point",
+        "shared.heading",
+        "shared.button-link",
+        "shared.callout-box",
+        "shared.badge-label",
+        "shared.affiliate-disclosure",
+        "shared.pros-cons"
+      ]
+    },
+    "faqsSection": {
+      "type": "component",
+      "component": "shared.faqs-content",
+      "repeatable": false
+    }
+  }
+}

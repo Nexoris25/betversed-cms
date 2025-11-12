@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_site_review_registration_steps",
+  "info": {
+    "displayName": "registrationSteps"
+  },
+  "options": {},
+  "attributes": {
+    "sectionTitle": {
+      "type": "string"
+    },
+    "sectionIntro": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "step": {
+      "type": "component",
+      "component": "shared.registration-step",
+      "repeatable": true
+    },
+    "sectionTips": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    }
+  },
+  "config": {}
+}

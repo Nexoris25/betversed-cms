@@ -1,0 +1,67 @@
+{
+  "collectionName": "components_bonus_review_bonus_summaries",
+  "info": {
+    "displayName": "bonusSummary"
+  },
+  "options": {},
+  "attributes": {
+    "bonusTitle": {
+      "type": "string"
+    },
+    "bonusAmount": {
+      "type": "string"
+    },
+    "minimumDeposit": {
+      "type": "string",
+      "required": true
+    },
+    "minimumOdds": {
+      "type": "string"
+    },
+    "wageringRule": {
+      "type": "string"
+    },
+    "comboConditions": {
+      "type": "string"
+    },
+    "validityPeriod": {
+      "type": "string"
+    },
+    "promoCodeNeeded": {
+      "type": "boolean"
+    },
+    "bestFor": {
+      "type": "component",
+      "component": "shared.key-point",
+      "repeatable": true
+    },
+    "isVerified": {
+      "type": "boolean"
+    },
+    "ctaButton": {
+      "type": "component",
+      "component": "shared.button-link",
+      "repeatable": false
+    },
+    "fullReviewLink": {
+      "type": "component",
+      "component": "shared.button-link",
+      "repeatable": false
+    },
+    "bonusTips": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "summary": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    }
+  },
+  "config": {}
+}

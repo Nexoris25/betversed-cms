@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_shared_affiliate_disclosures",
+  "info": {
+    "displayName": "affiliateDisclosure"
+  },
+  "options": {},
+  "attributes": {
+    "disclosureText": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_country_responsible_gamblings",
+  "info": {
+    "displayName": "responsibleGambling"
+  },
+  "options": {},
+  "attributes": {
+    "sectionTitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "toolsYouNeed": {
+      "type": "string"
+    },
+    "responsibleTools": {
+      "type": "component",
+      "component": "shared.responsible-gambling-tools",
+      "repeatable": true
+    },
+    "supportOptions": {
+      "type": "component",
+      "component": "shared.gambling-support",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

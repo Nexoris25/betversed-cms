@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_shared_authors_blocks",
+  "info": {
+    "displayName": "authorsBlock"
+  },
+  "options": {},
+  "attributes": {
+    "sectionTitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "authorBox": {
+      "type": "component",
+      "component": "shared.author-box",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_site_review_testing_snapshots",
+  "info": {
+    "displayName": "testingSnapshot"
+  },
+  "options": {},
+  "attributes": {
+    "sectionTitle": {
+      "type": "string"
+    },
+    "devicesUsed": {
+      "type": "string"
+    },
+    "networkUsed": {
+      "type": "string"
+    },
+    "loadTimeSeconds": {
+      "type": "decimal"
+    },
+    "dateTested": {
+      "type": "date"
+    },
+    "observations": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

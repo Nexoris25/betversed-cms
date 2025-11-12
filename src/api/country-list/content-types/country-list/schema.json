@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "country_lists",
+  "info": {
+    "singularName": "country-list",
+    "pluralName": "country-lists",
+    "displayName": "countryList"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slu": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "code": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

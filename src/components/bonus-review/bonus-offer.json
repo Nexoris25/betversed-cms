@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_bonus_review_bonus_offers",
+  "info": {
+    "displayName": "bonusOffer"
+  },
+  "options": {},
+  "attributes": {
+    "bonusTitle": {
+      "type": "string"
+    },
+    "bonusFullText": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "ProsConsList": {
+      "type": "component",
+      "component": "shared.pros-cons",
+      "repeatable": false
+    },
+    "authorNote": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    }
+  },
+  "config": {}
+}

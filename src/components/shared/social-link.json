@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_shared_social_links",
+  "info": {
+    "displayName": "socialLink"
+  },
+  "options": {},
+  "attributes": {
+    "platform": {
+      "type": "enumeration",
+      "enum": [
+        "X",
+        "LinkedIn",
+        "Instagram",
+        "YouTube",
+        "Facebook",
+        "WhatsApp",
+        "Telegram"
+      ]
+    },
+    "url": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

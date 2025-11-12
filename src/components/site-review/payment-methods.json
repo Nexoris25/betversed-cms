@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_site_review_payment_methods",
+  "info": {
+    "displayName": "paymentMethods"
+  },
+  "options": {},
+  "attributes": {
+    "sectionTitle": {
+      "type": "string"
+    },
+    "sectionIntro": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "deposits": {
+      "type": "component",
+      "component": "shared.transaction-item",
+      "repeatable": true
+    },
+    "withdrawals": {
+      "type": "component",
+      "component": "shared.transaction-item",
+      "repeatable": true
+    },
+    "authorNote": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,43 @@
+{
+  "collectionName": "components_shared_bookmaker_comparisons",
+  "info": {
+    "displayName": "bookmakerComparison"
+  },
+  "options": {},
+  "attributes": {
+    "bookmakerName": {
+      "type": "string"
+    },
+    "minStake": {
+      "type": "string"
+    },
+    "welcomeBonus": {
+      "type": "string"
+    },
+    "wageringRules": {
+      "type": "string"
+    },
+    "localLeagueOdds": {
+      "type": "boolean"
+    },
+    "payoutSpeed": {
+      "type": "string"
+    },
+    "mobileUXRating": {
+      "type": "decimal"
+    },
+    "liveBetting": {
+      "type": "boolean"
+    },
+    "streaming": {
+      "type": "boolean"
+    },
+    "betBuilder": {
+      "type": "boolean"
+    },
+    "supportSpeed": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

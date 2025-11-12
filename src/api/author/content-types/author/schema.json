@@ -1,0 +1,82 @@
+{
+  "kind": "collectionType",
+  "collectionName": "authors",
+  "info": {
+    "singularName": "author",
+    "pluralName": "authors",
+    "displayName": "Authors"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "maxLength": 80,
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "required": true
+    },
+    "profileImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Role": {
+      "type": "string",
+      "required": true
+    },
+    "expertiseTags": {
+      "type": "component",
+      "component": "shared.key-point",
+      "repeatable": true
+    },
+    "SocialLinks": {
+      "type": "component",
+      "component": "shared.social-link",
+      "repeatable": true
+    },
+    "Description": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml",
+        "maxLengthWords": 200
+      },
+      "required": true
+    },
+    "seoMeta": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
+    },
+    "mainContent": {
+      "type": "dynamiczone",
+      "components": [
+        "shared.rich-text",
+        "shared.callout-box",
+        "shared.badge-label",
+        "shared.heading"
+      ]
+    },
+    "faqsSection": {
+      "type": "component",
+      "component": "shared.faqs-content",
+      "repeatable": false
+    },
+    "main_review": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::bookmaker.bookmaker",
+      "inversedBy": "authors"
+    }
+  }
+}

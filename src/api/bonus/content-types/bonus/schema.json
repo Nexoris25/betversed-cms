@@ -1,0 +1,115 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bonuses",
+  "info": {
+    "singularName": "bonus",
+    "pluralName": "bonuses",
+    "displayName": "Bonus Review"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "pageTitle": {
+      "type": "string",
+      "maxLength": 80,
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "pageTitle",
+      "required": true
+    },
+    "leadText": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "ctaButton": {
+      "type": "component",
+      "component": "shared.button-link",
+      "repeatable": true
+    },
+    "heroImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "promoCode": {
+      "type": "component",
+      "component": "shared.promo-code",
+      "repeatable": false
+    },
+    "seoMeta": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
+    },
+    "bonusSummary": {
+      "type": "component",
+      "component": "bonus-review.bonus-summary",
+      "repeatable": false
+    },
+    "dynamicContent": {
+      "type": "dynamiczone",
+      "components": [
+        "shared.rich-text",
+        "shared.heading"
+      ]
+    },
+    "bonusOffers": {
+      "type": "component",
+      "component": "bonus-review.bonus-offer",
+      "repeatable": true
+    },
+    "finalVerdict": {
+      "type": "component",
+      "component": "shared.verdict-block",
+      "repeatable": false
+    },
+    "Sources": {
+      "type": "component",
+      "component": "shared.source-attribution",
+      "repeatable": true
+    },
+    "faqsSection": {
+      "type": "component",
+      "component": "shared.faqs-content",
+      "repeatable": false
+    },
+    "infoSources": {
+      "type": "component",
+      "component": "shared.source-attribution",
+      "repeatable": false
+    },
+    "cons": {
+      "type": "component",
+      "component": "default.cons",
+      "repeatable": true
+    },
+    "pros": {
+      "type": "component",
+      "component": "default.pros",
+      "repeatable": true
+    },
+    "typesOfBonuses": {
+      "type": "richtext"
+    },
+    "book_maker_name": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::book-maker-list.book-maker-list"
+    },
+    "howToActivateBonus": {
+      "type": "richtext"
+    }
+  }
+}

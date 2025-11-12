@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_default_pros",
+  "info": {
+    "displayName": "pros"
+  },
+  "options": {},
+  "attributes": {
+    "item": {
+      "type": "string",
+      "required": true
+    },
+    "biggest": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_shared_source_attributions",
+  "info": {
+    "displayName": "sourceAttribution"
+  },
+  "options": {},
+  "attributes": {
+    "sourceName": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "official",
+        "forum",
+        "media",
+        "internal"
+      ]
+    },
+    "url": {
+      "type": "string"
+    },
+    "note": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    }
+  },
+  "config": {}
+}

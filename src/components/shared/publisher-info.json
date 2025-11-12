@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_shared_publisher_infos",
+  "info": {
+    "displayName": "publisherInfo"
+  },
+  "options": {},
+  "attributes": {
+    "publisherName": {
+      "type": "string"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "website": {
+      "type": "string"
+    },
+    "description": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    }
+  },
+  "config": {}
+}
